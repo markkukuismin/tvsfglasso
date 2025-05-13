@@ -25,11 +25,10 @@ Simulate scale-free time-series data.
 }
 \examples{
 
-library(igraph)
-library(MASS)
+set.seed(1)
 
 n <- 5
-p <- 100
+p <- 50
 N <- 100
 
 Data <- generate_tv_sf_data(p = p, n = n, N = N)

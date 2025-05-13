@@ -9,10 +9,8 @@
 #' @return A scale-free glasso estimate.
 #'
 #' @examples
-#'
-#' library(glassoFast)
-#' library(igraph)
-#' library(MASS)
+#' 
+#' set.seed(1)
 #'
 #' n <- 5
 #' p <- 50

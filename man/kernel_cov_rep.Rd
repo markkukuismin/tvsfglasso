@@ -9,13 +9,13 @@ kernel_cov_rep(X = NULL, N = NULL, pos = NULL, h = NULL, kernel = "gaussian")
 \arguments{
 \item{X}{the time-series data.}
 
+\item{N}{the number of time points.}
+
 \item{pos}{time points where network estimates are computed.}
 
 \item{h}{the bandwidth. Default \code{5.848/N^(1/3)}.}
 
 \item{kernel}{the kernel used. Default \code{gaussian}.}
-
-\item{use_cor}{compute the correlation matrix. Default \code{FALSE}.}
 }
 \value{
 List of smoothed covariance or correlation matrices.
@@ -25,12 +25,10 @@ Computes the smoothed covariance matrix estimates for biological replicates.
 }
 \examples{
 
-library(huge)
-library(igraph)
-library(MASS)
+set.seed(1)
 
 n <- 5
-p <- 100
+p <- 50
 N <- 100
 
 Data <- generate_tv_sf_data(p = p, n = n, N = N)

@@ -31,20 +31,29 @@ Computes the smoothed covariance matrix estimates
 }
 \examples{
 
-library(huge)
-library(igraph)
-library(MASS)
+set.seed(1)
 
-n <- 5
-p <- 100
+n <- 1
+p <- 50
 N <- 100
 
 Data <- generate_tv_sf_data(p = p, n = n, N = N)
 
 Y <- Data$X
 
+length(Y)
+dim(Y[[1]])
+
+X <- matrix(0, p, N)
+
+for(i in 1:N){
+ 
+X[, i] <- Y[[i]]
+ 
+}
+
 pos <- 1:N
 
-S_t <- kernel_cov(X = Y, N = N, pos = pos)
+S_t <- kernel_cov(X = X, pos = pos)
 
 }
