@@ -4,7 +4,7 @@
 
 The R package `tvsfglasso` can be used to estimate dynamic networks from time-series data. See the example below.
 
-For more details on the MDSD, please refer to: "tvsfglasso: time-varying scale-free graphical lasso (to appear). Supplementary data and code needed to reproduce the results reported in the article are available at: [https://github.com/markkukuismin/tvsfglasso_supplementary](https://github.com/markkukuismin/tvsfglasso_supplementary).
+For more details on the MDSD, please refer to: "tvsfglasso: time-varying scale-free graphical lasso for network estimation from time-series data" (to appear). Supplementary data and code needed to reproduce the results reported in the article are available at: [https://github.com/markkukuismin/tvsfglasso_supplementary](https://github.com/markkukuismin/tvsfglasso_supplementary).
 
 ## Dependencies
 
