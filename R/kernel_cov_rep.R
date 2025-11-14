@@ -5,7 +5,7 @@
 #' @param X the time-series data. 
 #' @param N the number of time points.
 #' @param pos time points where network estimates are computed.
-#' @param h the bandwidth. Default \code{5.848/N^(1/3)}.
+#' @param h the bandwidth. Default \code{1}.
 #' @param kernel the kernel used. Default \code{gaussian}.
 #'
 #' @return List of smoothed covariance or correlation matrices.
@@ -37,7 +37,7 @@ kernel_cov_rep <- function(X = NULL, N = NULL, pos = NULL, h = NULL, kernel = "g
   
   p <- nrow(X[[1]])
   
-  if(is.null(h)) h <- 5.848/N^(1/3)
+  if(is.null(h)) h <- 1
   
   S_temp <- vector("list", N)
   

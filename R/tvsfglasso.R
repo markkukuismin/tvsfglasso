@@ -10,7 +10,7 @@
 #' @param alpha scale-free glasso tuning parameter. Default \code{0.1}.
 #' @param kernel the kernel used. Default \code{gaussian}.
 #' @param K the number of iterations (reweighting steps). Default \code{2}.
-#' @param h the bandwidth. Default \code{5.848/N^(1/3)}.
+#' @param h the bandwidth. Default \code{1}.
 #'
 #' @return List of sparse precision matrices, degrees of freedom, and smoothed covariance matrices.
 #'
@@ -65,7 +65,7 @@ tvsfglasso <- function(Y = NULL, N = NULL, use_cor = FALSE, pos = NULL, rep = FA
   if(is.null(pos)) stop("pos is missing with no default")
   if(is.null(rep)) stop("Specify rep")
   
-  if(is.null(h)) h <- 5.848/N^(1/3)
+  if(is.null(h)) h <- 1
   
   if(!rep){
     

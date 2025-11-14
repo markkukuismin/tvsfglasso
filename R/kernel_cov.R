@@ -4,7 +4,7 @@
 #'
 #' @param X the time-series data. 
 #' @param pos time points where network estimates are computed.
-#' @param h the bandwidth. Default \code{5.848/N^(1/3)}.
+#' @param h the bandwidth. Default \code{1}.
 #' @param use_cor compute the correlation matrix. Default \code{FALSE}.
 #' @param kernel the kernel used. Default \code{gaussian}.
 #'
@@ -50,7 +50,7 @@ kernel_cov <- function(X = NULL, pos = NULL, h = NULL, use_cor = FALSE, kernel =
   
   if(is.null(pos)) pos <- 1:N
   
-  if(is.null(h)) h <- 5.848/N^(1/3) # (200)^(1/3) = 5.848, See Zhou et al (2010) examples
+  if(is.null(h)) h <- 1
   
   sdX <- rep(1, p)
   
