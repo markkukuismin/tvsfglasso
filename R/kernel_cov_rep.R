@@ -49,9 +49,9 @@ kernel_cov_rep <- function(X = NULL, N = NULL, pos = NULL, h = NULL, kernel = "g
     
   }
   
-  s = pos/max(pos)
+  s = (pos - min(pos))/(max(pos) - min(pos))
   
-  if(kernel == "epanechnikov") K <- function(u) (3/4)*(1 - u^2)
+  if(kernel == "epanechnikov") K <- function(u) pmax(0, (3/4)*(1 - u^2))
   if(kernel == "gaussian") K <- function(u) stats::dnorm(u)
   
   i <- 1
